@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  django:
+    build:
+      context: ./chart_backend
+    container_name: django_container
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./chart_backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+      - DJANGO_SETTINGS_MODULE=chart_backend.settings
+
+  nextjs:
+    build:
+      context: ./chart_frontend
+    container_name: nextjs_container
+    command: npm start
+    volumes:
+      - ./chart_frontend:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
