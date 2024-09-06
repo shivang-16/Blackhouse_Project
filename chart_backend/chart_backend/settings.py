@@ -25,7 +25,11 @@ SECRET_KEY = "django-insecure-uyjx-#1(jpa0@j(4cu#vh1&#@g(1aek8tilkghsc6hxk-@7ymq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'blackhouse-project.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -54,6 +58,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "https://blackhouse-project.vercel.app",
     'http://localhost:3000', 
 ]
 
