@@ -1,7 +1,3 @@
-Sure, here's the properly formatted version of the file:
-
----
-
 # Django and Next.js Project Setup
 
 This repository contains a full-stack application with Django as the backend and Next.js as the frontend. The project is containerized using Docker and orchestrated with Docker Compose. Follow the instructions below to set up and run the project locally.
