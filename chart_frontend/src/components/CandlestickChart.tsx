@@ -14,7 +14,6 @@ import {
   BarProps,
 } from "recharts";
 
-// Define Types
 interface CandlestickData {
   x: string;
   open: number;
@@ -131,7 +130,7 @@ const CandlestickChart: React.FC = () => {
         <Bar
           dataKey="openClose"
           fill="#8884d8"
-          shape={(props: BarProps) => <Candlestick {...props} />}
+          shape={(props: any) => <Candlestick {...props} />}
         >
           {preparedData.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={index % 2 === 0 ? '#8884d8' : '#82ca9d'} />
